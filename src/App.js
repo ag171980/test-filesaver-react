@@ -5,6 +5,7 @@ import './App.css';
 function App() {
   const handleClick = () => {
     let clientes = ["ALT", "LP", "LS"]
+    let formato = "Excel"
     let str = ""
     let token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pbmlzdHJhZG9yMiIsImV4cCI6MTY3ODc0NjM3MiwiaWF0IjoxNjc4NzI4MzcyfQ.BFk6oWiLLchzNHXoxOzi-UUsgOLtIFPBU_1UxNPhhrzk1Luu8yvUShttScvKWEvPPteCjnvZ_8cXvI0Mz32ulg"
     // let asd = 'excel.xls'
@@ -12,12 +13,13 @@ function App() {
     clientes.map((cliente, index) => (
       str += `${cliente}${(index === clientes.length - 1) ? "" : "-"}`
     ))
+    str += `.${formato === "Excel" ? 'xls' : 'pdf'}`
     console.log(str)
     saveAs(
       'https://desa-fabi.tecnoaccion.com.ar/api-user/reportes/getReportesComprobantesFile?anioId=2022&mesId=12&clienteId=ALT,LP',
-      `${str}.xls`,
+      `${str}`,
       {
-        Accept: "application/octet-stream",
+        Accept: `application/${formato === "Excel" ? 'octet-stream' : 'x-pdf'}`,
         Authorization: "Bearer " + token,
       }
     )
