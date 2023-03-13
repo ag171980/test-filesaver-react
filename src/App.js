@@ -16,7 +16,7 @@ function App() {
     str += `.${formato === "Excel" ? 'xls' : 'pdf'}`
     console.log(str)
     saveAs(
-      'https://desa-fabi.tecnoaccion.com.ar/api-user/reportes/getReportesComprobantesFile?anioId=2022&mesId=12&clienteId=ALT,LP',
+      'http://desa-fabi.tecnoaccion.com.ar/api-user/reportes/getReportesComprobantesFile?anioId=2022&mesId=12&clienteId=ALT,LP',
       `${str}`,
       {
         Accept: `application/${formato === "Excel" ? 'octet-stream' : 'x-pdf'}`,
