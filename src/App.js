@@ -4,11 +4,11 @@ import './App.css';
 
 function App() {
   const handleClick = () => {
-    let asd = 'imagen.png'
+    let asd = 'excel.xls'
     saveAs(
-      'https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2021/09/WhatsApp-logo-12.png?fit=1200%2C771&quality=60&strip=all&ssl=1',
+      'http://desa-fabi.tecnoaccion.com.ar/api-user/reportes/getReportesComprobantesFile?anioId=2022&mesId=12&clienteId=ALT,LP',
       asd,
-      { Accept: "image/png" }
+      { Accept: "application/octet-stream" }
     )
   }
   return (
