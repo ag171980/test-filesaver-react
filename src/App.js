@@ -14,7 +14,7 @@ function App() {
     ))
     console.log(str)
     saveAs(
-      'http://desa-fabi.tecnoaccion.com.ar/api-user/reportes/getReportesComprobantesFile?anioId=2022&mesId=12&clienteId=ALT,LP',
+      'https://desa-fabi.tecnoaccion.com.ar/api-user/reportes/getReportesComprobantesFile?anioId=2022&mesId=12&clienteId=ALT,LP',
       `${str}.xls`,
       {
         Accept: "application/octet-stream",
