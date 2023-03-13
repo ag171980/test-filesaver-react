@@ -4,10 +4,10 @@ import './App.css';
 
 function App() {
   const handleClick = () => {
-    let asd = 'imagen'
+    let asd = 'imagen.png'
     saveAs(
       'https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2021/09/WhatsApp-logo-12.png?fit=1200%2C771&quality=60&strip=all&ssl=1',
-      `${asd}.png`,
+      asd,
       { Accept: "image/png" }
     )
   }
